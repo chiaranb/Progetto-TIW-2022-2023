@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="css/mystyle.css" />
+<script src="homeManagement.js" charset="utf-8" defer></script>
+<script src="utils.js" charset="utf-8" defer></script>
+</head>
+<body>
+	<div align="right">
+		<a href="Logout">Logout</a>
+	</div>
+	<h1>Welcome to the Home Page</h1>
+	<p class="welcome">
+		Nice to see you again <span id="id_username"></span> :)
+	</p>
+	<div id="id_alert" class="alertmessage"></div>
+
+	<div id="id_container" class="container"></div>
+
+	<form class="formdiv" id="id_categoryform" action="#">
+		<p class="title">Complete the form to create a new category</p>
+		<fieldset>
+			<p>
+				Name of category: <input type="text" name="name" id="category"
+					required />
+			</p>
+			<p>
+				<label for="father">Choose a father category:</label> <select
+					name="father" id="father"></select>
+			</p>
+			<input type="button" name="Create Category" value="Create Category">
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/mystyle.css"
+	th:href="@{/css/mystyle.css}" />
+</head>
+<body>
+	<div th:fragment="list(category)" th:class="fragment2">
+		<ul th:unless="${#lists.isEmpty(category.subCategories)}"
+			class="subcategory">
+			<li th:each="child : ${category.subCategories}"><span
+				th:text="${child.getPosition() + ' ' + child.getName()}"
+				th:class="${subtree.contains(child)} ? 'red-text' : ''"></span> <a
+				th:href="@{/CopyHere(fatherid=${child.getId()}, id=${subtree.get(0).getId()})}"
+				th:unless="${subtree.contains(child) or child.getSubcategories().size() == 9}">Copy
+					Here</a>
+				<ul th:replace="this::list (${child})"></ul></li>
+		</ul>
+	</div>
+</body>
+</html>

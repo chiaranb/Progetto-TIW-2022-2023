@@ -1,0 +1,189 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	list-style: none;
+}
+
+.formdiv {
+	width: 28%;
+	position: absolute;
+	top: 110px;
+	right: 20px;
+	display: inline;
+	margin: 10px;
+	padding: 10px;
+	color: #aa7941;
+	font-size: 14px;
+}
+
+h1 {
+	background-color: #aa7941;
+	color: #feffff;
+}
+
+.title {
+	font-style: italic;
+	text-decoration-line: underline;
+	font-weight: bold;
+}
+
+.login {
+	width: 30%;
+	padding: 10px;
+	margin: 20px;
+	border: 2px solid #aa7941;
+}
+
+input {
+	padding: 4px;
+	margin: 6px 0;
+	box-sizing: border-box;
+}
+
+.welcome {
+	font-weight: bold;
+	color: #aa7941;
+	font-style: italic;
+}
+
+ul li {
+	margin-left: 15px;
+	position: relative;
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+ul li::before {
+	content: " ";
+	position: absolute;
+	width: 1px;
+	background-color: #000000;
+	top: 5px;
+	bottom: -12px;
+	left: -10px;
+}
+
+body>ul>li:first-child::before {
+	top: 12px;
+}
+
+ul li:not(:first-child):last-child::before {
+	display: none;
+}
+
+ul li:only-child::before {
+	display: list-item;
+	content: " ";
+	position: absolute;
+	width: 1px;
+	background-color: #000000;
+	top: 5px;
+	bottom: 7px;
+	height: 7px;
+	left: -10px;
+}
+
+ul li::after {
+	content: " ";
+	position: absolute;
+	left: -10px;
+	width: 10px;
+	height: 1px;
+	background-color: #000000;
+	top: 12px;
+}
+
+.dragme {
+	font-weight: bold;
+	color: #b7b7b7;
+	font-style: italic;
+}
+
+.drophere.selected {
+	font-weight: bold;
+	color: #9be908;
+	font-style: italic;
+}
+
+.drophere {
+	font-weight: bold;
+	color: #b7b7b7;
+	font-style: italic;
+}
+
+.drophere.nonselected {
+	font-weight: bold;
+	color: #b7b7b7;
+	font-style: italic;
+}
+
+.dragging {
+	font-weight: bold;
+	color: #506fb7;
+	font-style: italic;
+}
+
+.confirmation-box {
+	width: 24%;
+	border: 1px solid black;
+	position: absolute;
+	top: 400px;
+	right: 100px;
+	display: inline;
+	margin: 30px;
+	padding: 1px;
+}
+
+.cancel-button {
+	margin: 20px;
+	width: 100px;
+	padding: 5px;
+	transition-duration: 0.4s;
+}
+
+.cancel-button:hover {
+	background-color: #ff7d78;
+	color: white;
+}
+
+.confirm-button {
+	margin: 20px;
+	width: 100px;
+	padding: 5px;
+	transition-duration: 0.4s;
+}
+
+.confirm-button:hover {
+	background-color: #72fa78;
+	color: white;
+}
+
+.confirmation-text {
+	margin: 30px;
+	font-weight: bold;
+	color: red;
+}
+
+.save-button {
+	margin: 20px;
+	width: 100px;
+	padding: 5px;
+	transition-duration: 0.4s;
+}
+
+.save-button:hover {
+	background-color: #72fa78;
+	color: white;
+}
+
+.subtree {
+	color: red;
+	font-style: italic;
+}
+
+.alertmessage {
+	color: red;
+	font-weight: bold;
+}

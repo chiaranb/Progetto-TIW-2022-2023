@@ -1,0 +1,136 @@
+.formdiv {
+	width: 28%;
+	position: absolute;
+  	top: 70px;
+  	right: 10px;
+	display: inline;
+	margin: 10px;
+	padding: 10px;
+	color: #aa7941;
+    font-size: 14px;
+}
+
+.top {
+	color: #aa7941;
+}
+
+div > p {
+	font-style: italic;
+  	text-decoration-line: underline;
+    font-weight: bold;
+}
+
+.welcome {
+    font-weight: bold;
+	color: #aa7941;
+	font-style: italic;
+}
+
+* {font-family:Arial, Helvetica, sans-serif;}
+
+
+* {list-style: none;}
+
+h1 {
+	background-color: #aa7941;
+	color: #feffff;
+}
+
+.login {
+	width: 20%;
+	padding: 10px;
+	margin: 20px;
+	border: 2px solid #aa7941;		
+}
+
+.highlight {
+	color: #ff2600;
+    font-weight: bold;
+}
+
+.error {
+	color: #ff2600;
+	font-weight: bold;
+}
+
+input {
+  padding: 4px;
+  margin: 6px 0;
+  box-sizing: border-box;
+}
+
+.fragment1 {
+	color: #000000;
+}
+
+.fragment2 {
+	color: #000000;
+}
+
+.red-text {
+	color: red;
+}
+
+.impossibile {
+	color: #998950;
+    font-weight: bold;
+}
+
+/*Nomi di tutte le categorie*/
+ul li {
+  margin-left: 15px;
+  position: relative;
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+ul li::before {
+  content: " ";
+  position: absolute;
+  width: 1px;
+  background-color: #000000;
+  top: 5px;
+  bottom: -12px;
+  left: -10px;
+}
+
+body > ul > li:first-child::before {top: 12px;}
+
+ul li:not(:first-child):last-child::before {display: none;}
+
+ul li:only-child::before {
+  display: list-item;
+  content: " ";
+  position: absolute;
+  width: 1px;
+  background-color: #000000;
+  top: 5px;
+  bottom: 7px;
+  height: 7px;
+  left: -10px;
+}
+
+ul li::after {
+  content: " ";
+  position: absolute;
+  left: -10px;
+  width: 10px;
+  height: 1px;
+  background-color: #000000;
+  top: 12px;
+}
+
+a:link {
+  color: blue;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+a.copy {
+	position: relative;
+	font-size: 13px;
+	left: 40px;
+}

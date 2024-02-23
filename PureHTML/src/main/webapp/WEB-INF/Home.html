@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="../css/mystyle.css"
+	th:href="@{/css/mystyle.css}" />
+</head>
+<body>
+	<div align="right">
+		<a th:href="@{/Logout}">Logout</a>
+	</div>
+
+	<h1>Welcome to the Home Page</h1>
+	<p class="welcome"
+		th:text="${'Nice to see you again ' + session.user.username + ' :)'}"></p>
+
+	<div th:each="category : ${topCategories}"
+		th:insert="@{WEB-INF/fragment.html} :: list (category)"
+		th:if="${#lists.isEmpty(subtree)}"></div>
+
+	<div th:each="category : ${topCategories}"
+		th:insert="@{WEB-INF/fragment2.html} :: list (category)"
+		th:unless="${#lists.isEmpty(subtree)}"></div>
+
+	<a th:href="@{/CopyHere(fatherid=0, id=${subtree.get(0).getId()})}"
+		class="copy"
+		th:unless="${#lists.isEmpty(subtree) or topCategories.get(0).getSubcategories().size() == 9}">Copy
+		Here</a>
+
+	<div class="formdiv" th:if="${#lists.isEmpty(subtree)}">
+		<p>Complete the form to create a new category</p>
+		<form action="#" th:action="@{/CreateCategory}" method="POST">
+			<fieldset>
+				<p>
+					Name of category: <input type="text" name="name" required />
+				</p>
+				<p>
+					<label for="allCategories">Choose a father category:</label> <select
+						name="father" id="father">
+						<option th:each="p : ${allCategories}"
+							th:unless="${p.id == 0 or p.subCategories.size() == 9}"
+							th:value="${p.id}" th:text="${p.position + ' ' + p.name}"></option>
+					</select>
+				</p>
+				<input type="submit" name="Create Category" value="Create Category">
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>
